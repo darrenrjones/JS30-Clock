@@ -38,9 +38,26 @@ body {
 }
 
 .hand {
-  width:50%;
+  /* width:50%; */
   height:6px;
   background:black;
   position: absolute;
   top:50%;
+  transform-origin: 100%;  /* move pivot point along x axis all the way to the right */
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1); /* snap back used by hitting little box in dev inspector*/
+
+}
+
+.hour-hand {
+  width: 50%;
+}
+
+.min-hand {
+  width: 50%;
+}
+
+.second-hand {
+  width: 50%;
 }
